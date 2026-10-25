@@ -11,6 +11,7 @@ The skill grew out of a research-methods course project and two rounds of review
 | `SKILL.md` | The skill: preparation, document structure, voice and sentence rules, the audit loop, how to revise someone else's draft, deliverables. |
 | `scripts/style_audit.py` | Standard-library Python. Reports sentence statistics (mean, SD, burstiness, share of very short and very long sentences), meta-discourse openers, counting tics, First/Second markers, machine lexicon, em-dashes, first-person count and the most repeated words and bigrams for `.tex`, `.md` and `.txt` files. `--sentences` lists the offending sentences. |
 | `references/ai-tells.md` | Catalogue of fourteen tells with examples, why each reads as machine output, and the fix; plus what never to remove. |
+| `references/humanizer-additions.md` | Rules merged from academic-humanizer: extra tells, claim and evidence discipline, voice and venue matching, proposal mode, and how conflicts with this skill are resolved. |
 | `references/checklist.md` | The manual pass, the audit targets, and the verification that nothing but prose changed (numbers and citation keys). |
 | `examples/before-after.md` | Paired passages and the audit table from the two documents the skill was first applied to. |
 
@@ -51,7 +52,7 @@ python3 scripts/style_audit.py report.md other.tex --json
 ## Related skills
 
 - Figures: [academic-diagram](https://github.com/plbbl/academic-diagram-skill) for editable architecture and schematic diagrams, referenced from the structure rules.
-- Sentence-level humanising: [academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer) covers over-claiming verbs, over-long sentences and em-dashes; this skill keeps those rules and adds the document-level and statistical ones (openers, counting, rhythm, lexical repetition, author voice, measured audit).
+- Sentence-level humanising: [academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer) (MIT, copyright 2026 AIScientists-Dev). Its rules that this skill lacked are merged into `references/humanizer-additions.md` and the audit lexicon, restated in this skill's terms; this skill stays primary where the two disagree. Install it alongside only if you want its full proposal guidance verbatim.
 
 ## Licence
 
