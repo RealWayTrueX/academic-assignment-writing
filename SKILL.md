@@ -42,12 +42,14 @@ These rules target the statistical and lexical tells of machine-written academic
 
 **Claims no stronger than the evidence.** Use "is consistent with", "suggests" and "shows" rather than "confirms", "establishes", "validates" or "proves". Pilot estimates "check the design; they are not findings". Keep every number, unit, interval and citation exactly as the analysis produced it.
 
+**Evidence, venue and proposals.** `references/humanizer-additions.md` adds the tells this list does not cover (significance hype, novelty padding, "In recent years" openers, citation dumping, vague hedges), the claim and evidence check, matching an earlier writing sample, and a proposal mode where ambition is judged against feasibility. Where it conflicts with this file, this file wins. Neither is a way to hide AI use; keep the course's disclosure.
+
 **Keep what makes it credible.** Dense specific numbers, statute sections, equation numbers, script names, seeds, named data releases and dated decisions read as human and as careful. Never thin them out to improve flow.
 
 ## 4. Audit loop
 
 1. Run `python3 scripts/style_audit.py file.tex --sentences` (also works on .md and .txt). It reports sentence statistics, meta-discourse openers, counting tics, First/Second markers, the machine lexicon, em-dashes, the first-person count and the most repeated words and bigrams, and it lists the very short and very long sentences.
-2. Do the manual pass in `references/checklist.md`: openers, paragraph starts, parallel runs, fragments, repeated phrases, parenthetical patches, voice consistency.
+2. Do the manual pass in `references/checklist.md`, plus the extra tells and the claim and evidence check in `references/humanizer-additions.md`: openers, paragraph starts, parallel runs, fragments, repeated phrases, parenthetical patches, voice consistency.
 3. Fix the editable source (the .tex or .md), not the PDF. Re-run the audit. Stop when no flagged item remains that a reader would notice; do not chase a metric past the point where the prose would sound forced.
 4. Recompile and look at the pages: length budget, float placement, no overfull lines.
 5. Verify that nothing but prose changed. Diff the multiset of numbers and the citation keys before and after; a short script does this in a few lines (see the checklist).

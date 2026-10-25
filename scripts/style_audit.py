@@ -26,6 +26,11 @@ AI_WORDS = [
     "groundbreaking", "cutting-edge", "state-of-the-art", "it is worth noting", "it is important to note",
     "in conclusion", "in summary", "plays a vital role", "plays a crucial role", "not only", "but also",
     "a wide range of", "in today's", "ever-evolving", "game-changer", "meticulous", "meticulously",
+    # significance hype, novelty padding and formulaic openers (after academic-humanizer, MIT)
+    "paves the way", "pave the way", "sheds light", "shed light", "opens new avenues", "of paramount importance",
+    "bridges the gap", "has the potential to", "to the best of our knowledge", "for the first time",
+    "in recent years", "with the rapid development", "attracted increasing attention", "despite recent advances",
+    "serves as", "it should be emphasized", "importantly", "extensive experiments",
 ]
 META_OPENERS = re.compile(
     r"\b(This|The present|The following) (document|paper|report|section|chapter|study|work|thesis|essay)"
