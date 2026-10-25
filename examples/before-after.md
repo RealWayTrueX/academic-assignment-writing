@@ -68,3 +68,24 @@ After: "Python fell on the 'similar' side of my decision rule. Its estimates are
 Before: "Every tool is free and open source under a permissive licence (...), so nothing has to be bought or requested; ... One shell script, run_all.sh, reproduces every number, table and figure of the methodology document with a fixed seed." (with "free", "licence", "reproduc-" and "fixed seed" recurring across the abstract, the decision and this section)
 
 After: "All of the software is open source under permissive licences (...), so nothing has to be bought or requested, and the exact versions are pinned in requirements.txt. ... A single shell script, run_all.sh, regenerates every number, table and figure of the methodology document from the same seed."
+
+## Second review round: tables, consistency and fonts
+
+**Table of estimates (units, alignment, wrapping)**
+
+Before: header "Anticipation | Enforcement", cells such as "−0.0026 (0.0019)" and "−0.1284* (0.0716)", row labels such as "B3 threshold diff-in-disc (h = 10,000 sq ft)" wrapping over three lines, robustness labels such as "R4 exposure with the CY2024-25 occupancy-group option" over three lines.
+
+After: spanning header "Coefficient ×100 (pp)", cells "−0.26 (0.19)" and "−12.84* (7.16)" in decimal-aligned columns, one-line labels ("B3 threshold diff-in-disc", "R4 occupancy-group option") with the bandwidth and the units moved to the note, and the fifteen robustness checks grouped under the threats named in the text (exposure measurement, confounding shocks, inference, composition, outcomes, timing, sample).
+
+**Run time stated in two documents**
+
+Before: "Downloading the data takes about five minutes there, building the panel 15 seconds and all estimations 96 seconds with at most 3.7 GB of memory, and the benchmark and the figures add under a minute." A reviewer read "under a minute" as the whole script and flagged a contradiction with 96 seconds.
+
+After (re-measured): "Downloading the data takes about five minutes, and a complete rerun after that takes a little over three minutes (189 seconds in the last run). The estimations account for about 100 seconds of it, including the 1,000 permutation regressions, and use under 4 GB of memory. The Python-versus-R benchmark adds just under a minute, while building the sample and the panel, the check against statsmodels and the figures, tables and PDFs take about half a minute together." The methodology document now uses the same figures.
+
+**A label that disagreed with the text**
+
+Before: the text called both deeds and mortgage satisfactions placebos, while the robustness table labelled only deeds as a placebo. A satisfaction records the repayment of a mortgage, which is part of the financing behaviour under study, so it cannot be a placebo.
+
+After: deeds are the placebo and satisfactions the repayment outcome, in the text, the table label and the table note alike.
+

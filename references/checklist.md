@@ -52,6 +52,15 @@ print("removed", dict(A - B)); print("added", dict(B - A))
 - [ ] The set of citation keys is unchanged: `grep -o '\\cite{[^}]*}' file.tex | sort | uniq -c` before and after.
 - [ ] A change log lists every paragraph touched and why, and the before/after audit table is in the report.
 
-## H. Report
+## H. Tables, numbers and typesetting
+- [ ] Estimates are in the unit the text uses (pp for a probability outcome), with the scale in the column header; no 0.00xx strings.
+- [ ] Coefficient, stars and standard error sit in separate, decimal-aligned columns; star width is reserved.
+- [ ] No row label wraps; long checks are grouped under sub-headers that match the text; the note names any row in a different unit.
+- [ ] Every caption stays with its table or figure (a non-floating block is wrapped in a minipage).
+- [ ] Every number that appears in two documents (run time, memory, counts) matches, and lists of parts give the total first.
+- [ ] Labels agree between table, text and note (a "placebo" in the text is a placebo in the table).
+- [ ] `pdffonts` shows Italic and Bold faces of the text font; no "Font shape ... undefined" warning in the log.
+
+## I. Report
 
 Write the report in the user's language. Lead with what changed and what the metrics now are; then the files. Name the rules applied. Do not claim a detector score; the audit measures tells, it does not predict a classifier.
